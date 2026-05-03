@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3 class="mb-4">⚙️ Admin Dashboard</h3>
+
+<!-- ADD PRODUCT -->
+<div class="card p-4 shadow-sm mb-4">
+  <h5>Add Product</h5>
+
+  <form method="POST" enctype="multipart/form-data">
+    <input name="name" class="form-control mb-2" placeholder="Product Name" required>
+
+    <input name="price" class="form-control mb-2" placeholder="Price" required>
+
+    <input type="file" name="image" class="form-control mb-3" required>
+
+    <button class="btn btn-dark w-100">Add Product</button>
+  </form>
+</div>
+
+<!-- PRODUCT LIST -->
+<h5 class="mb-3">All Products</h5>
+
+<div class="row">
+  {% for product in products %}
+  <div class="col-md-3 mb-4">
+
+    <div class="card shadow-sm">
+
+      <img src="/{{ product.image }}" class="card-img-top">
+
+      <div class="card-body">
+        <h6>{{ product.name }}</h6>
+        <p>₹{{ product.price }}</p>
+
+        <a href="/edit_product/{{ product.id }}" class="btn btn-warning btn-sm">Edit</a>
+        <a href="/delete_product/{{ product.id }}" class="btn btn-danger btn-sm">Delete</a>
+      </div>
+
+    </div>
+
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

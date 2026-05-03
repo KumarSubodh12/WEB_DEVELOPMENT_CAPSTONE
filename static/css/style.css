@@ -1,0 +1,171 @@
+/* GLOBAL */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+/* Sidebar links */
+.sidebar a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #ff3f6c;
+    color: white;
+}
+
+/* Active link (optional) */
+.sidebar a.active {
+    background: #ff3f6c;
+    color: white;
+}
+
+/* Logout at bottom */
+.logout-section {
+    margin-top: auto;
+}
+
+.logout-section a {
+    background: #ff3f6c;
+    color: white;
+    text-align: center;
+}
+
+/* ================= MAIN CONTENT ================= */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background: white;
+    border-bottom: 1px solid #eee;
+    padding: 10px 20px;
+}
+
+/* ================= HERO BANNER ================= */
+.banner {
+    background: linear-gradient(to right, #ff3f6c, #ff7a5c);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* ================= PRODUCT CARDS ================= */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ================= BUTTONS ================= */
+.btn-danger {
+    background: #ff3f6c;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #e7335e;
+}
+
+/* Wishlist button */
+.btn-outline-dark:hover {
+    background: #ff3f6c;
+    color: white;
+    border: none;
+}
+
+/* ================= GRID FIX ================= */
+.container-fluid {
+    max-width: 100%;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .main-content {
+        margin-left: 180px;
+    }
+
+    .card img {
+        height: 180px;
+    }
+}
+/* ===== AUTH PAGES (LOGIN / REGISTER) ===== */
+
+.auth-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f6;
+}
+
+.auth-card {
+    width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.auth-card h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-card input {
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.auth-card button {
+    width: 100%;
+    background: #ff3f6c;
+    border: none;
+}
+
+.auth-card button:hover {
+    background: #e7335e;
+}
+.container {
+    margin-top: 40px;
+}

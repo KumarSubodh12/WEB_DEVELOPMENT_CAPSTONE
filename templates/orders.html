@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>📦 My Orders</h3>
+
+<div class="row">
+  {% for product in products %}
+  <div class="col-md-3 mb-4">
+
+    <div class="card">
+      <img src="{{ url_for('static', filename=product.image) }}" class="card-img-top">
+
+      <div class="card-body text-center">
+        <h6>{{ product.name }}</h6>
+        <p>₹{{ product.price }}</p>
+      </div>
+    </div>
+
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
